@@ -56,9 +56,6 @@ module DarrylJenksCr
       end
     end
 
-    private def permutations(permutable_key, substitution_value, options = {} of Symbol => String)
-    end
-
     def permutations_for(size_of_tokens)
       [true, false].repeated_permutations(size_of_tokens).to_a
     end
