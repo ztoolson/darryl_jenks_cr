@@ -2,6 +2,8 @@
 
 TODO: Write a description here
 
+Inspired by https://github.com/abrandoned/darryl_jenks. This is a crystal version.
+
 ## Installation
 
 Add this to your application's `shard.yml`:
