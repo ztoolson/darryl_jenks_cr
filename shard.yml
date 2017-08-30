@@ -1,0 +1,9 @@
+name: darryl_jenks_cr
+version: 0.1.0
+
+authors:
+  - Zach Toolson <zach.toolson@mx.com>
+
+crystal: 0.23.1
+
+license: MIT
