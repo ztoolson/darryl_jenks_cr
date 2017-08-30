@@ -28,21 +28,21 @@ module DarrylJenksCr
       number_of_permutations = [(split_tokens.size - 1), 1].max
 
       permutations_for(number_of_permutations).each do |permutation_pattern|
-        permutation_string = ""
+        permutation_string = String::Builder.new("")
         copied_tokens = split_tokens.map { |token| token.dup }
 
         permutation_pattern.each do |replace_split_token|
-          permutation_string += copied_tokens.shift
+          permutation_string << copied_tokens.shift
 
           if replace_split_token
-            permutation_string += substitution_value
+            permutation_string << substitution_value
           else
-            permutation_string += (options[:non_replace_substitution]? || permutable_key)
+            permutation_string << (options[:non_replace_substitution]? || permutable_key)
           end
         end
 
-        permutation_string += copied_tokens.shift unless copied_tokens.empty?
-        permutations << permutation_string
+        permutation_string << copied_tokens.shift unless copied_tokens.empty?
+        permutations << permutation_string.to_s
       end
 
       permutations
